@@ -17,6 +17,7 @@
 		C00BD4BF2A127B3F00FCFB55 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BD4BE2A127B3F00FCFB55 /* Pokemon.swift */; };
 		C00BD4C22A128CCF00FCFB55 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C00BD4C12A128CCF00FCFB55 /* Kingfisher */; };
 		C00BD4C42A129FB100FCFB55 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00BD4C32A129FB100FCFB55 /* PopUpView.swift */; };
+		C0A711F12A13DACE004071C3 /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A711F02A13DACE004071C3 /* PokemonListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C00BD4BC2A1247EF00FCFB55 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		C00BD4BE2A127B3F00FCFB55 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		C00BD4C32A129FB100FCFB55 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		C0A711F02A13DACE004071C3 /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				C00BD4B52A12375900FCFB55 /* MainView.swift */,
 				C00BD4B72A1237E400FCFB55 /* PokemonCell.swift */,
 				C00BD4C32A129FB100FCFB55 /* PopUpView.swift */,
+				C0A711F02A13DACE004071C3 /* PokemonListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A711F12A13DACE004071C3 /* PokemonListView.swift in Sources */,
 				C00BD4C42A129FB100FCFB55 /* PopUpView.swift in Sources */,
 				C00BD4A72A12371500FCFB55 /* ContentView.swift in Sources */,
 				C00BD4B82A1237E400FCFB55 /* PokemonCell.swift in Sources */,

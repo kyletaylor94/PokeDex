@@ -8,8 +8,6 @@
 import SwiftUI
 import Kingfisher
 
-
-
 struct PokemonCell: View {
     
     @ObservedObject var apiManager = ApiManager()

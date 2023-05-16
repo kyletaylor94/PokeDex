@@ -10,16 +10,17 @@ import UIKit
 
 struct MainView: View {
     @State private var showPopup = false
+    @State var searchText = ""
     @StateObject var viewModel = ApiManager()
     
     private let items = [GridItem(.fixed(120)), GridItem(.fixed(120)), GridItem(.fixed(120))]
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             ScrollView{
                 LazyVGrid(columns: items, spacing: 15){
-                    ForEach(viewModel.pokemons){ pokemon in
+                    ForEach(searchResults){ pokemon in
                         Button {
                             viewModel.selectedPokemon = pokemon
                             showPopup = true
@@ -44,12 +45,29 @@ struct MainView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(.red, for: .navigationBar)
         }
+        .searchable(text: $searchText)
+        .foregroundColor(.black)
+        .accentColor(.black)
+        .onChange(of: searchText) { newValue in
+            searchText = newValue.lowercased()
+        }
     }
-}
+    var searchResults: [Pokemon] {
+           if searchText.isEmpty {
+               return viewModel.pokemons
+           } else {
+               return viewModel.pokemons.filter { $0.name.contains(searchText) }
+               
+           }
+       }
+    }
+
+
+
 
 struct MainView_PreviewProvider: PreviewProvider{
     static var previews: some View{
-        MainView(viewModel: ApiManager())
+        MainView()
     }
 }
 
